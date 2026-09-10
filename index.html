@@ -1,1 +1,284 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Ali El-Din Wael — Junior Backend .NET Developer portfolio.">
+<title>Ali El-Din Wael | Junior Backend .NET Developer</title>
+<style>
+:root{
+  --bg:#050912;--bg2:#08111f;--card:#0b1728;--card2:#0e1d31;
+  --text:#f4f8ff;--heading:#ffffff;--muted:#91a2b9;--blue:#168cff;--cyan:#19c7ff;
+  --line:rgba(67,151,255,.22);--glow:rgba(18,137,255,.25);
+  --max:1180px
+}
+html.light{
+  --bg:#f7f9fc;
+  --bg2:#eef3f8;
+  --card:#ffffff;
+  --card2:#f1f5f9;
+  --text:#1e293b;
+  --heading:#0f172a;
+  --muted:#53657a;
+  --blue:#076fe5;
+  --cyan:#008fca;
+  --line:rgba(15,61,100,.14);
+  --glow:rgba(0,112,229,.13)
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;background:
+radial-gradient(circle at 85% 12%,rgba(0,116,255,.16),transparent 28%),
+radial-gradient(circle at 15% 35%,rgba(0,194,255,.05),transparent 24%),var(--bg);line-height:1.55}
+a{color:inherit;text-decoration:none}.container{width:min(var(--max),92%);margin:auto}
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 78%,transparent);
+backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;gap:30px}
+.logo{font-size:26px;font-weight:950;letter-spacing:-2px;color:var(--blue);display:flex;gap:9px;align-items:center}
+.logo span{font-size:15px;color:var(--text);letter-spacing:-.3px}
+.links{display:flex;align-items:center;gap:25px;margin:auto}
+.links a{font-size:13px;color:var(--muted);transition:.2s}.links a:hover,.links a.active{color:var(--text)}
+.nav-right{display:flex;gap:8px;align-items:center}.theme-toggle{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer}
+.hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:55px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:440px;height:440px;border-radius:50%;right:3%;top:15%;background:radial-gradient(circle,rgba(20,130,255,.2),transparent 64%);filter:blur(12px);pointer-events:none}
+.kicker{color:#72bfff;font-size:13px;margin-bottom:13px}.kicker:before{content:"✦";margin-right:7px}
+h1{font-size:clamp(52px,7vw,88px);line-height:.94;letter-spacing:-5px;margin:0 0 15px}
+.gradient{background:linear-gradient(100deg,var(--text),#4ca7ff 62%,#7edcff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h2{font-size:25px;margin:0;color:#cbd8e9}.hero h2 b{color:var(--blue)}
+.hero-copy{max-width:680px;color:var(--muted);font-size:15px;margin:18px 0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:23px 0}.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid var(--line);border-radius:10px;font-weight:800;font-size:13px;background:var(--card)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px var(--glow)}.primary{background:linear-gradient(135deg,#1598ff,#0877ed);border:0;color:white}
+.contact-row{display:flex;flex-wrap:wrap;gap:18px;margin-top:23px}.contact-mini{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.contact-mini strong{display:block;color:var(--text);font-size:12px}
+.visual{min-height:480px;display:grid;place-items:center;position:relative}
+.code-window{width:min(510px,100%);border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(17,34,57,.92),rgba(5,12,23,.94));box-shadow:0 30px 100px rgba(0,0,0,.35),0 0 80px var(--glow);padding:0;overflow:hidden;transform:perspective(900px) rotateY(-5deg)}
+.window-bar{height:40px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}.circle{width:8px;height:8px;border-radius:50%;background:#35516f}.window-title{margin-left:8px;color:#7187a2;font-size:11px}
+.code{padding:26px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:2;color:#b9cbe0}.code .blue{color:#4eaaff}.code .cyan{color:#40d7ff}.code .green{color:#7ed69b}.code .purple{color:#b79cff}
+.orbit{position:absolute;width:390px;height:390px;border:1px solid rgba(25,150,255,.18);border-radius:50%;right:2%;top:50%;transform:translateY(-50%);box-shadow:0 0 60px rgba(0,132,255,.12) inset}
+.orbit:after{content:".NET";position:absolute;right:38px;top:58px;font-weight:950;font-size:48px;color:rgba(42,145,255,.18)}
+section{padding:75px 0}.eyebrow{font-size:11px;letter-spacing:2px;color:#5db4ff;font-weight:900;text-transform:uppercase}
+.section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:25px}.section-title{font-size:36px;line-height:1.05;margin:6px 0}.section-title span{color:var(--blue)}
+.section-sub{max-width:520px;color:var(--muted);font-size:13px;margin:0}
+.skills-layout{display:grid;grid-template-columns:.8fr 2.2fr;gap:28px;align-items:start}
+.skill-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.skill{background:linear-gradient(145deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:13px;padding:17px 13px;min-height:90px}
+.skill .icon{font-size:25px;margin-bottom:8px}.skill b{display:block;font-size:13px}.skill small{color:var(--muted);font-size:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tag{font-size:11px;padding:6px 9px;border-radius:7px;border:1px solid var(--line);color:#bcd0e9;background:rgba(20,44,73,.45)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:linear-gradient(145deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;min-height:290px;transition:.25s}.project:hover{transform:translateY(-5px);border-color:rgba(46,157,255,.55);box-shadow:0 20px 45px rgba(0,0,0,.2)}
+.project-top{height:105px;background:radial-gradient(circle at 70% 20%,rgba(25,144,255,.28),transparent 35%),linear-gradient(135deg,#0c2138,#08111d);display:grid;place-items:center;font-size:32px;border-bottom:1px solid var(--line)}
+.project-body{padding:17px;display:flex;flex-direction:column;flex:1}.project-no{color:#5b7796;font-size:10px;font-weight:900}.project h3{margin:5px 0 8px;font-size:18px}.project p{color:var(--muted);font-size:12px;margin:0}.project .tags{margin-top:auto}.project-links{display:flex;gap:8px;margin-top:15px}.small-btn{font-size:10px;padding:7px 10px;border:1px solid var(--line);border-radius:7px;color:#bcd0e9}
+.split{display:grid;grid-template-columns:1.25fr .75fr;gap:20px}.card{background:linear-gradient(145deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:15px;padding:22px}
+.timeline{position:relative;padding-left:25px}.timeline:before{content:"";position:absolute;left:4px;top:4px;bottom:4px;width:1px;background:var(--line)}.event{position:relative;margin-bottom:24px}.event:before{content:"";position:absolute;left:-25px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px var(--bg)}.event small{color:#5db4ff;font-weight:850;font-size:10px}.event h3{font-size:15px;margin:3px 0}.event p{font-size:12px;color:var(--muted);margin:0}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.cert{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:15px}.cert-icon{font-size:22px}.cert b{display:block;font-size:12px;margin-top:8px}.cert small{font-size:9px;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.contact-item{padding:15px;border:1px solid var(--line);background:var(--card);border-radius:11px}.contact-item span{display:block;color:var(--muted);font-size:10px}.contact-item strong{font-size:12px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:15px;align-items:center}
+@media(max-width:950px){.links{display:none}.hero{grid-template-columns:1fr}.visual{min-height:350px}.orbit{right:50%;transform:translate(50%,-50%)}.skills-layout,.split,.contact-grid{grid-template-columns:1fr}.skill-grid{grid-template-columns:repeat(3,1fr)}.projects-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.nav{height:60px}.hero{padding:45px 0}.hero h2{font-size:20px}h1{font-size:52px;letter-spacing:-3px}.code-window{transform:none}.skill-grid,.projects-grid,.cert-grid,.contact-list{grid-template-columns:1fr 1fr}.section-title{font-size:29px}.contact-row{gap:10px}.footer-inner{flex-direction:column;align-items:flex-start}}
 
+/* Refined Light Mode */
+html.light body{
+  background:
+    radial-gradient(circle at 85% 8%,rgba(0,126,255,.10),transparent 28%),
+    radial-gradient(circle at 12% 35%,rgba(0,184,230,.06),transparent 25%),
+    var(--bg);
+  color:var(--text);
+}
+html.light nav{
+  background:rgba(247,249,252,.86);
+  border-bottom-color:rgba(15,61,100,.12);
+}
+html.light .hero h2{color:#334155}
+html.light .hero-copy,
+html.light .section-sub,
+html.light .project p,
+html.light .event p,
+html.light .card p,
+html.light .contact-mini,
+html.light .contact-item span{color:var(--muted)}
+html.light .section-title,
+html.light h1,
+html.light h2,
+html.light h3,
+html.light .skill b,
+html.light .project h3,
+html.light .contact-item strong{color:var(--heading)}
+html.light .code-window{
+  background:linear-gradient(145deg,#e8f1fb,#ffffff);
+  box-shadow:0 25px 70px rgba(27,74,115,.16),0 0 55px rgba(0,120,240,.10);
+}
+html.light .code{color:#334155}
+html.light .code .blue{color:#075fc7}
+html.light .code .cyan{color:#007ca8}
+html.light .code .green{color:#16734b}
+html.light .code .purple{color:#7652c5}
+html.light .project,
+html.light .skill,
+html.light .card,
+html.light .cert,
+html.light .contact-item{
+  box-shadow:0 8px 25px rgba(15,44,72,.055);
+}
+html.light .project-top{
+  background:radial-gradient(circle at 70% 20%,rgba(0,132,255,.16),transparent 35%),
+             linear-gradient(135deg,#e8f2fc,#dce8f5);
+}
+html.light .tag{
+  color:#36516d;
+  background:#edf4fa;
+  border-color:rgba(15,61,100,.12);
+}
+html.light .small-btn{color:#36516d}
+html.light .theme-toggle{
+  background:#ffffff;
+  border-color:rgba(15,61,100,.15);
+  box-shadow:0 3px 12px rgba(15,44,72,.08);
+}
+html.light .orbit{border-color:rgba(0,118,230,.14);box-shadow:0 0 60px rgba(0,118,230,.07) inset}
+html.light .orbit:after{color:rgba(0,105,220,.10)}
+html.light footer{border-top-color:rgba(15,61,100,.12)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#home">AW <span>Ali El-Din Wael</span></a>
+    <div class="links">
+      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a>
+      <a href="#skills">Skills</a><a href="#certificates">Certificates</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right"><button class="theme-toggle" id="themeToggle">☀️ Light</button></div>
+  </div>
+</nav>
+
+<header class="container hero" id="home">
+  <div>
+    <div class="kicker">Hello, I'm</div>
+    <h1>Ali <span class="gradient">El-Din Wael</span></h1>
+    <h2>Junior Backend <b>.NET</b> Developer</h2>
+    <p class="hero-copy">I'm a 3rd year Engineering student with a strong passion for backend development, C#, and building scalable web applications. I enjoy solving problems, working with databases, and turning ideas into real projects.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View My Projects →</a>
+      <a class="btn" href="mailto:alywael31@gmail.com">✉ Gmail</a>
+    </div>
+    <div class="contact-row">
+      <a class="contact-mini" href="tel:+201001916698">📞 <span><strong>Call</strong>+20 100 191 6698</span></a>
+      <a class="contact-mini" href="https://wa.me/201001916698" target="_blank">💬 <span><strong>WhatsApp</strong>Chat with me</span></a>
+      <a class="contact-mini" href="https://github.com/alyy-commits" target="_blank">◉ <span><strong>GitHub</strong>alyy-commits</span></a>
+      <a class="contact-mini" href="https://www.linkedin.com/in/ali-el-din-wael-a1b557295/" target="_blank">in <span><strong>LinkedIn</strong>Ali El-Din Wael</span></a>
+    </div>
+  </div>
+  <div class="visual">
+    <div class="orbit"></div>
+    <div class="code-window">
+      <div class="window-bar"><i class="circle"></i><i class="circle"></i><i class="circle"></i><span class="window-title">backend-developer.cs</span></div>
+      <div class="code">
+        <div><span class="blue">public class</span> <span class="cyan">Developer</span></div>
+        <div>{</div>
+        <div>&nbsp;&nbsp;<span class="blue">string</span> Name = <span class="green">"Ali El-Din Wael"</span>;</div>
+        <div>&nbsp;&nbsp;<span class="blue">string</span> Role = <span class="green">".NET Backend Developer"</span>;</div>
+        <div>&nbsp;&nbsp;<span class="blue">string[]</span> Stack = {</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"C#"</span>, <span class="green">"ASP.NET Core"</span>,</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"EF Core"</span>, <span class="green">"SQL Server"</span>,</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"LINQ"</span>, <span class="green">"REST APIs"</span></div>
+        <div>&nbsp;&nbsp;};</div>
+        <div>&nbsp;&nbsp;<span class="purple">Build</span>(<span class="green">"Scalable Solutions"</span>);</div>
+        <div>}</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about"><div class="container">
+  <div class="section-head"><div><div class="eyebrow">About Me</div><h2 class="section-title">Building ideas into <span>real solutions.</span></h2></div>
+  <p class="section-sub">A hands-on engineering student focused on backend development, databases, APIs and practical software projects.</p></div>
+  <div class="split">
+    <div class="card"><p>I am a third-year Communication & Computer Engineering and Electronics student at <b>Al Safwa High Institute for Engineering</b>. My main career direction is .NET Backend Development while continuing to grow my Full-Stack skills.</p><p style="color:var(--muted)">My experience comes from training and self-driven projects including MVC systems, REST APIs, database applications, Python GUI software and Arduino/ESP32 engineering projects.</p></div>
+    <div class="card"><div class="eyebrow">Current Focus</div><h3>Backend Engineering</h3><p style="color:var(--muted);font-size:13px">Database-driven applications, clean APIs, MVC architecture and scalable server-side solutions.</p><div class="tags"><span class="tag">Problem Solving</span><span class="tag">OOP</span><span class="tag">SQL</span><span class="tag">REST APIs</span></div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container">
+  <div class="skills-layout">
+    <div><div class="eyebrow">Skills & Tech Stack</div><h2 class="section-title">Technologies I <span>Work With</span></h2><p class="section-sub">Hands-on experience with modern backend tools, databases and web technologies.</p></div>
+    <div><div class="skill-grid">
+      <div class="skill"><div class="icon">◈</div><b>C#</b><small>Intermediate</small></div>
+      <div class="skill"><div class="icon">▣</div><b>ASP.NET Core</b><small>Intermediate</small></div>
+      <div class="skill"><div class="icon">EF</div><b>Entity Framework Core</b><small>Intermediate</small></div>
+      <div class="skill"><div class="icon">▰</div><b>SQL Server</b><small>Intermediate</small></div>
+      <div class="skill"><div class="icon">λ</div><b>LINQ</b><small>Intermediate</small></div>
+    </div><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">OOP</span><span class="tag">REST APIs</span><span class="tag">Python</span><span class="tag">C++</span><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">Power BI</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="container">
+  <div class="section-head"><div><div class="eyebrow">My Projects</div><h2 class="section-title">Featured <span>Projects</span></h2></div><p class="section-sub">A selection of university, training and personal projects focused on real-world development.</p></div>
+  <div class="projects-grid">
+    <article class="project"><div class="project-top">▣</div><div class="project-body"><div class="project-no">01 / WEB APP</div><h3>Subscription Management System</h3><p>Full-stack management system for clients, subscriptions, offers, freeze periods and events, with an admin area and database integration.</p><div class="tags"><span class="tag">ASP.NET Core</span><span class="tag">EF Core</span><span class="tag">SQL Server</span><span class="tag">MVC</span></div></div></article>
+    <article class="project"><div class="project-top">⌁</div><div class="project-body"><div class="project-no">02 / EMBEDDED</div><h3>Automatic Water Level Monitor</h3><p>Arduino-based system that monitors water level and automatically controls a pump through a relay.</p><div class="tags"><span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">Proteus</span></div></div></article>
+    <article class="project"><div class="project-top">◉</div><div class="project-body"><div class="project-no">03 / PYTHON</div><h3>Text-to-Recording App</h3><p>GUI application that converts entered text into speech with language selection and Generate, Play and Stop controls.</p><div class="tags"><span class="tag">Python</span><span class="tag">Tkinter / GUI</span><span class="tag">TTS</span></div></div></article>
+    <article class="project"><div class="project-top">API</div><div class="project-body"><div class="project-no">04 / BACKEND</div><h3>E-commerce REST API</h3><p>Training project focused on designing backend endpoints and working with databases for an e-commerce workflow.</p><div class="tags"><span class="tag">ASP.NET Core</span><span class="tag">Web API</span><span class="tag">EF Core</span></div></div></article>
+    <article class="project"><div class="project-top">MVC</div><div class="project-body"><div class="project-no">05 / ITI PROJECT</div><h3>E-commerce MVC</h3><p>Complete MVC training project using Identity, EF Core, SQL Server, LINQ and frontend technologies.</p><div class="tags"><span class="tag">MVC</span><span class="tag">Identity</span><span class="tag">SQL Server</span></div></div></article>
+    <article class="project"><div class="project-top">⌁</div><div class="project-body"><div class="project-no">06 / ENGINEERING</div><h3>Radar & Smart Systems</h3><p>Engineering projects including a distance/angle radar visualization, fire and gas detection, password lock and IC counter.</p><div class="tags"><span class="tag">Arduino</span><span class="tag">Sensors</span><span class="tag">Electronics</span></div></div></article>
+  </div>
+</div></section>
+
+<section id="certificates"><div class="container">
+  <div class="section-head"><div><div class="eyebrow">Certificates</div><h2 class="section-title">My <span>Certificates</span></h2></div><p class="section-sub">Training completed to strengthen my backend development foundation.</p></div>
+  <div class="cert-grid">
+    <div class="cert"><div class="cert-icon">▣</div><b>Database</b><small>Completed</small></div>
+    <div class="cert"><div class="cert-icon">◈</div><b>C# Basics</b><small>Completed</small></div>
+    <div class="cert"><div class="cert-icon">◇</div><b>OOP</b><small>Completed</small></div>
+    <div class="cert"><div class="cert-icon">C#</div><b>Advanced C#</b><small>Completed</small></div>
+    <div class="cert"><div class="cert-icon">λ</div><b>LINQ</b><small>Completed</small></div>
+    <div class="cert"><div class="cert-icon">EF</div><b>EF Core</b><small>Completed</small></div>
+    <div class="cert"><div class="cert-icon">API</div><b>ASP.NET Core / MVC</b><small>Completed</small></div>
+    <div class="cert"><div class="cert-icon">↗</div><b>ASP.NET Web API</b><small>Completed</small></div>
+  </div>
+</div></section>
+
+<section id="education"><div class="container">
+  <div class="split">
+    <div><div class="eyebrow">Education</div><h2 class="section-title">My <span>Education</span></h2><div class="card"><div class="timeline">
+      <div class="event"><small>2023 — PRESENT</small><h3>Al Safwa High Institute for Engineering</h3><p>Communication & Computer Engineering and Electronics · Third Year</p></div>
+      <div class="event"><small>TRAINING</small><h3>Backend .NET — Route</h3><p>Backend development training covering C#, databases, EF Core and ASP.NET.</p></div>
+      <div class="event"><small>TRAINING</small><h3>Backend .NET — ITI Suez</h3><p>One-month practical backend training.</p></div>
+      <div class="event" style="margin-bottom:0"><small>LANGUAGE</small><h3>Upper-Intermediate English — BUE</h3><p>English language certificate.</p></div>
+    </div></div></div>
+    <div class="card"><div class="eyebrow">Mindset</div><h2 style="font-size:27px;margin:8px 0">Always open to <span style="color:var(--blue)">new opportunities.</span></h2><p style="color:var(--muted);font-size:13px">I am looking for opportunities to learn, build real products, contribute to teams and grow as a backend developer.</p><a class="btn primary" href="mailto:alywael31@gmail.com">Let's Connect →</a></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="container">
+  <div class="contact-grid">
+    <div><div class="eyebrow">Contact</div><h2 class="section-title">Let's build something <span>useful.</span></h2><p class="section-sub">For opportunities, collaboration or project discussions, feel free to reach out.</p></div>
+    <div class="contact-list">
+      <a class="contact-item" href="mailto:alywael31@gmail.com"><span>Email</span><strong>alywael31@gmail.com</strong></a>
+      <a class="contact-item" href="tel:+201001916698"><span>Call</span><strong>+20 100 191 6698</strong></a>
+      <a class="contact-item" href="https://wa.me/201001916698" target="_blank"><span>WhatsApp</span><strong>Chat with me</strong></a>
+      <a class="contact-item" href="https://github.com/alyy-commits" target="_blank"><span>GitHub</span><strong>alyy-commits</strong></a>
+      <a class="contact-item" href="https://www.linkedin.com/in/ali-el-din-wael-a1b557295/" target="_blank"><span>LinkedIn</span><strong>Ali El-Din Wael</strong></a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="container footer-inner"><div><b style="color:var(--text)">AW · Ali El-Din Wael</b><br>Junior Backend Developer · Lifelong Learner</div><div>© 2026 Ali El-Din Wael. All rights reserved.</div></div></footer>
+
+<script>
+(function(){
+  const root=document.documentElement,btn=document.getElementById('themeToggle');
+  function setTheme(t){
+    root.classList.toggle('light',t==='light');
+    root.classList.toggle('dark',t==='dark');
+    btn.textContent=t==='dark'?'☀️ Light':'🌙 Dark';
+    localStorage.setItem('portfolio-theme',t);
+  }
+  const saved=localStorage.getItem('portfolio-theme')||'dark'; setTheme(saved);
+  btn.addEventListener('click',()=>setTheme(root.classList.contains('dark')?'light':'dark'));
+  const links=[...document.querySelectorAll('.links a')];
+  const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  window.addEventListener('scroll',()=>{
+    let current=sections[0]?.id;
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+    links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+  });
+})();
+</script>
+</body>
+</html>
